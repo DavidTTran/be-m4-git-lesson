@@ -8,8 +8,4 @@ class OrderItem < ApplicationRecord
     item = Item.find(item_id)
     self.price = item.price
   end
-
-  def self.item_quantity(order_id, item_id)
-    where("order_id = ? AND item_id = ?", order_id, item_id).count
-  end
 end
